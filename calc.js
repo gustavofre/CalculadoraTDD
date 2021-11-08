@@ -98,3 +98,5 @@ function enviaReq(resultado, op){
 	event.preventDefault();
 	fazPost(link, jsonEnvio)
 }
+
+module.exports = {soma, subtrai, divide};
