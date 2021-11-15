@@ -61,6 +61,19 @@ function resto(){
 	event.preventDefault();
 }
 
+function raiz() {
+	var inputNum1 = document.querySelector('#num1')
+
+	var num1 = inputNum1.value;
+	
+	var op = "raiz";
+
+	resultado = Math.sqrt(num1)
+	document.getElementById("resultadoCalc").innerHTML = `o resultado é ${resultado}`
+	enviaReq(resultado, op)
+	event.preventDefault();
+}
+
 
 function limpa(){
 	document.getElementById("resultadoCalc").innerHTML = ``
@@ -98,5 +111,3 @@ function enviaReq(resultado, op){
 	event.preventDefault();
 	fazPost(link, jsonEnvio)
 }
-
-module.exports = {soma, subtrai, divide};
